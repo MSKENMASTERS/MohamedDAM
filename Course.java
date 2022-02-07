@@ -10,6 +10,30 @@ public abstract class Course {
 
     private String name, id, teacher;
     private LocalTime duration;
+    
+    Course(){
+        name="";
+        id="";
+        teacher="";
+        duration=null;
+    }
+    
+    Course(String name, String teacher, String id, String duration){
+        setName(name);
+        setID(id);
+        setTeacher(teacher);
+        if (Integer.parseInt(duration) == 45) {
+            setDuration(LocalTime.of(Integer.parseInt(duration), 0, 0));
+        }else{
+            System.err.println("Error, the duration is invalid");
+        }
+    }
+    
+    Course(Course copy){
+        this.setName(copy.getName());
+        this.setID(copy.getID());
+        this.setDuration(copy.getDuration());
+        this.setTeacher(copy.getTeacher());
 
     public void setName(String name) {
         if (name.length() >= 4) {
