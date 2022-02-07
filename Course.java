@@ -46,6 +46,7 @@ public abstract class Course {
         int account = 0;
         for (int i = 0; i == teacher.length(); i++) {
             if (teacher.charAt(i) == ' ' && account == 0) {
+                this.teacher=teacher;
                 account++;
                 teacher.replace(" ", ",");
             }
