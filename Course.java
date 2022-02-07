@@ -34,6 +34,7 @@ public abstract class Course {
         this.setID(copy.getID());
         this.setDuration(copy.getDuration());
         this.setTeacher(copy.getTeacher());
+    }
 
     public void setName(String name) {
         if (name.length() >= 4) {
