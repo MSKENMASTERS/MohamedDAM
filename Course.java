@@ -1,9 +1,5 @@
 package Bilingual_Fourth_task;
 
-/**
- *
- * @author mohamed
- */
 import java.time.LocalTime;
 
 public abstract class Course {
